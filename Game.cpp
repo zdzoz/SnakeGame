@@ -26,7 +26,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		renderer = SDL_CreateRenderer(window, -1, 0);
 		if (renderer) {
-			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+			SDL_SetRenderDrawColor(renderer, bgcolor, bgcolor, bgcolor, 255);
 			std::cout << "Renderer successfully created!" << std::endl;
 		}
 
@@ -103,7 +103,7 @@ void Game::snake(int len) {
 		SDL_RenderFillRect(renderer, &snakeTrail[i]);
 	}
 	// Set render colour back to black
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	SDL_SetRenderDrawColor(renderer, bgcolor, bgcolor, bgcolor, 255);
 
 	snakeTrail.pop_back();
 }

@@ -30,5 +30,6 @@ private:
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 	std::vector<SDL_Rect> snakeTrail{ (SDL_Rect{ x, y, snakeSize, snakeSize }) };
+	int bgcolor = 51;
 };
 
